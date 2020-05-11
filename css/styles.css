@@ -1,0 +1,33 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&w=1000&q=80');
+    background-size: auto 100vh;
+    height: 100vh;
+    font-family: Courier;
+  }
+  .menu {
+    background-color: #d8b9c3;
+    border-radius: 5px;
+  }
+  .menu li{
+    list-style: none;
+  }
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  a {
+    text-decoration: none;
+    color: #363062;
+    font-size: 18px;
+  } 
+  a:hover {
+    text-decoration: underline;
+  }
+  .site-subtitle,
+  .site-title {
+    text-align: center;
+    color: whitesmoke;
+  }
+  .site-subtitle {
+   font-style: italic;
+  }
