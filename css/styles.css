@@ -9,13 +9,17 @@ body {
   background-size: auto 100vh;
   height: 100vh;
   font-size: 12px;
+  font-family: 'Roboto', sans-serif;
 }
+
 /* breakpoint */
+
 @media (min-width: 400px) {
   body {
     font-size: 14px;
   }
 }
+
 @media (min-width: 600px) {
   body {
     font-size: 18px;
@@ -29,14 +33,14 @@ body {
 }
 
 header {
-  height: 50vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .menu {
-  background-color: #d8b9c3;
+  background-color: #6886c5;
   position: fixed;
   width: 100vw;
   top: 0;
@@ -58,7 +62,7 @@ header {
 
 a {
   text-decoration: none;
-  color: #363062;
+  color: #f9f9f9;
 }
 
 a:hover {
@@ -68,18 +72,65 @@ a:hover {
 
 .site-subtitle, .site-title {
   text-align: center;
-  color: whitesmoke;
+  color: #f9f9f9;
 }
 
 .site-title {
   font-size: 4em;
+  font-family: 'DM Mono', monospace;
 }
 
 .site-subtitle {
-  font-style: italic;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.8em;
+}
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2 {
+  font-family: 'Source Code Pro', monospace;
+  color: #f9f9f9;
+  margin-bottom: 1.2em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 240px);
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 4em - 48px - 1.5em);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio {
-  width: 180px;
-  height: 180px;
+  height: 230px;
+  width: 230px;
+  object-fit: cover;
+  object-position: left bottom;
+  border-radius: 50%;
 }
+/* 
+@media (min-width: 1200px) {
+  .img-portfolio {
+    height: 10em;
+    width: 100%;
+  }
+} */
