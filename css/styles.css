@@ -5,14 +5,12 @@
 }
 
 body {
-  background-image: url('../img/fundo.jpg');
+  background-image: url('../img/back1.png');
   background-size: auto 100vh;
   height: 100vh;
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
 }
-
-/* breakpoint */
 
 @media (min-width: 400px) {
   body {
@@ -42,7 +40,7 @@ header {
 }
 
 .menu {
-  background-color: #6886c5;
+  background-color: #222831;
   position: fixed;
   width: 100vw;
   top: 0;
@@ -65,13 +63,12 @@ header {
 }
 
 .menu a:active, .menu a:hover {
-  background-color: #4d4c7d;
-  color: #f9f9f9;
+  color: #ececec;
 }
 
 a {
   text-decoration: none;
-  color: #4d4c7d;
+  color: #ea9085;
 }
 
 a:hover {
@@ -79,14 +76,14 @@ a:hover {
 }
 
 .titulo {
-  transform: translateX(120vh);
+  transform: translateY(100vh);
   opacity: 0;
   animation: linear 2s animacaoTitulo forwards;
 }
 
 @keyframes animacaoTitulo {
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -106,9 +103,13 @@ a:hover {
   line-height: 1.8em;
 }
 
-.sobre, .contato, .portfolio {
+.sobre, .portfolio {
   padding: 2em;
   min-height: 100vh;
+}
+
+.contato {
+  min-height: 30vh;
 }
 
 @media (min-width: 1200px) {
@@ -127,7 +128,9 @@ a:hover {
 }
 
 .sobre p {
-  color: #f9f9f9;
+  font-family: 'DM Mono', monospace;
+  color: #ececec;
+  font-weight: bold;
   text-indent: 1.4em;
   margin-bottom: 1.4em;
   text-align: justify;
@@ -145,13 +148,8 @@ a:hover {
 
 .sobre .avatar img {
   border-radius: 50%;
-}
-
-.sobre .avatar img:hover {
-  border-width: 3px;
-  border-style: solid;
-  border-color: #4d4c7d;
-  transform: scale(0.95);
+  padding: 5px;
+  background-color: #ea9085;
 }
 
 .portfolio .grid {
@@ -220,12 +218,17 @@ a:hover {
   transform: rotateY(180deg);
 }
 
+.contato {
+  justify-content: space-between;
+}
+
 .contato .icons {
   text-align: center;
 }
 
 .contato a {
-  font-size: 1.5em;
+  margin: 30px;
+  font-size: 2.5em;
   transition: text-shadow .5s;
 }
 
